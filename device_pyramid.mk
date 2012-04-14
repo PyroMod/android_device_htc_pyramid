@@ -118,6 +118,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
 
+# call the gapps setup
+$(call inherit-product-if-exists, vendor/google/gapps.mk)
+
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/pyramid/media_a1026.mk)
 
