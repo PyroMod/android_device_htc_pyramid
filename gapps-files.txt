@@ -1,6 +1,5 @@
 app/ChromeBookmarksSyncAdapter.apk
 app/FaceLock.apk
-app/GalleryGoogle.apk
 app/GenieWidget.apk
 app/Gmail.apk
 app/GoogleBackupTransport.apk
