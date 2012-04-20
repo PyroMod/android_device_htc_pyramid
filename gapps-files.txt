@@ -8,6 +8,7 @@ app/GoogleContactsSyncAdapter.apk
 app/GoogleFeedback.apk
 app/GoogleLoginService.apk
 app/GooglePartnerSetup.apk
+app/GoogleQuickSearchBox
 app/GoogleServicesFramework.apk
 app/GoogleTTS.apk
 app/MarketUpdater.apk
