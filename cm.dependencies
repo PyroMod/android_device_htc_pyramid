@@ -9,10 +9,4 @@
                 "target_path": "device/htc/msm8660-common"
                 "branch": "opensensation"
         }
-    },
-            {
-                    "repository": "android_device_htc_pyramid",
-                    "target_path": "device/htc/pyramid"
-                    "branch": "ics-cm"
-            }
 ]
