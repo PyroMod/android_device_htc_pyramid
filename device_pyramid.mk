@@ -109,10 +109,7 @@ PRODUCT_COPY_FILES += \
 
 ## misc
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.setupwizard.enable_bypass=1 \
-    dalvik.vm.lockprof.threshold=500 \
     ro.com.google.locationfeatures=1 \
-    dalvik.vm.dexopt-flags=m=y
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
