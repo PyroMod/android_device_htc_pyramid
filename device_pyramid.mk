@@ -110,7 +110,6 @@ PRODUCT_COPY_FILES += \
 ## misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
-    ro.com.google.networklocation=1 \
     ro.setupwizard.enable_bypass=1 
 
 # call the proprietary setup
