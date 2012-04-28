@@ -4,7 +4,7 @@
 
 debug.fb.rgb565=0
 debug.sf.hw=1
-debug.enabletr=false
+debug.enabletr=true
 
 #cm qcom build lub
 com.qc.hardware=true
