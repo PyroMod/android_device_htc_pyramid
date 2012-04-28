@@ -36,7 +36,6 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1
 
 TARGET_KERNEL_CONFIG := cyanogenmod_pyramid_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/msm8660
 
 # QCOM Gralloc/Copybit/HWcomposer/Webkit
 COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
