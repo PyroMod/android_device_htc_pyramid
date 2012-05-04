@@ -40,7 +40,6 @@ TARGET_KERNEL_CONFIG := cyanogenmod_pyramid_defconfig
 
 # QCOM Gralloc/Copybit/HWcomposer/Webkit
 COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
-TARGET_USES_OVERLAY := false
 
 #Camera
 BOARD_HAVE_HTC_FFC := true
