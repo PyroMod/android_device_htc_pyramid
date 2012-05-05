@@ -25,7 +25,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/pyramid/overlay
 # GPS and Light
 PRODUCT_PACKAGES += \
     gps.pyramid \
-    lights.msm8660
+    lights.pyramid
 
 # Torch
 PRODUCT_PACKAGES += \
@@ -109,7 +109,6 @@ PRODUCT_COPY_FILES += \
 
 ## misc
 PRODUCT_PROPERTY_OVERRIDES += \
-    windowsmgr.max_events_per_sec=240 \
     ro.com.google.locationfeatures=1 \
     ro.setupwizard.enable_bypass=1 
 
