@@ -10,7 +10,7 @@ com.qc.hardware=true
 com.qc.hdmi_out=true
 ro.hdmi.enable=true
 
-#c2d
+#dyn
 debug.composition.type=dyn
 ro.sf.compbypass.enable=1
 dev.pm.dyn_samplingrate=1
