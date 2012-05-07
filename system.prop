@@ -5,12 +5,12 @@
 debug.sf.hw=1
 debug.enabletr=true
 
-#cm qcom build lub
+# cm qcom build lub
 com.qc.hardware=true
 com.qc.hdmi_out=true
 ro.hdmi.enable=true
 
-#dyn
+# dyn
 debug.composition.type=dyn
 ro.sf.compbypass.enable=1
 dev.pm.dyn_samplingrate=1
@@ -54,7 +54,7 @@ ro.telephony.default_network=0
 ro.ril.set.mtu1472=1
 
 # For HSDPA low throughput
-ro.ril.disable.power.collapse=1
+ro.ril.disable.power.collapse=0
 
 # For China NEL
 ro.ril.enable.prl.recognition=1
