@@ -267,12 +267,9 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci \
     oneshot
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p26 /dev/block/mmcblk0p27 /dev/block/mmcblk0p18
-    class late_start
+    class core
     user root
     disabled
-
-on property:ro.emmc=1
-    start rmt_storage
 
 service modem /system/bin/wireless_modem
     user system
@@ -296,6 +293,17 @@ on property:ro.hdmi.enable=true
 service htcbatt /system/bin/htcbatt
     class late_start
     user root
+
+service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+    class main
+    user root
+    disabled
+
+service thermald /system/bin/thermald
+    class main
+    user root
+    group root
+    disabled
 
 service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     class main
