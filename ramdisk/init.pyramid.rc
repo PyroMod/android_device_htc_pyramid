@@ -46,6 +46,7 @@ on early-fs
     symlink /vendor/firmware/misc/modem.mdt /vendor/firmware/modem.mdt
 
     mount ext4 /dev/block/mmcblk0p22 /system wait ro data=ordered noauto_da_alloc
+    setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
     mount ext4 /dev/block/mmcblk0p23 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
     mount ext4 /dev/block/mmcblk0p24 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
     mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
