@@ -56,6 +56,10 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/pyramid/overlay
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
+# Custom media config for HTC camera
+PRODUCT_COPY_FILES += \
+    device/htc/pyramid/media_profiles.xml:system/etc/media_profiles.xml
+
 # GPS and Light
 PRODUCT_PACKAGES += \
     gps.pyramid \
