@@ -58,7 +58,7 @@ PRODUCT_COPY_FILES += \
 
 # Custom media config for HTC camera
 PRODUCT_COPY_FILES += \
-    device/htc/pyramid/media_profiles.xml:system/etc/media_profiles.xml
+    device/htc/pyramid/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # GPS and Light
 PRODUCT_PACKAGES += \
