@@ -47,7 +47,9 @@ $(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
 ## misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
+    dalvik.vm.lockprof.threshold=500 \
     ro.com.google.locationfeatures=1 \
+    dalvik.vm.dexopt-flags=m=y
 
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/pyramid/overlay
@@ -122,4 +124,7 @@ $(call inherit-product, device/htc/pyramid/media_htcaudio.mk)
 
 $(call inherit-product, frameworks/base/build/phone-xhdpi-1024-dalvik-heap.mk)
 
+$(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
+
+WIFI_BAND := 802_11_ABG
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
