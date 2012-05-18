@@ -5,6 +5,7 @@ Working:
 * Audio [Headphones | Speaker]
 * Bluetooth [File Transferring | Pairing ]
 * Camera
+* CRT Animation
 * Front Facing Camera [Taking Pictures and Video Recording]
 * GPS
 * Messaging [Multimedia | Text]
@@ -19,6 +20,7 @@ Known issues:
 * Audio routing between earphone and speaker [Reboot fixes]
 * Bluetooth Issues with ID3 tag
 * Camera crashes after some usage causing camera to freeze [Reboot fixes]
+* DSP app [Does not work currently]
 * Video [AVI Format] does not play in stock gallery app
 * Video [AVI Format] video hardware acceleration does not work
 * Wifi calling not available [There is a wifi-calling app but not functional in CM9]
