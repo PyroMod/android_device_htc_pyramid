@@ -36,7 +36,7 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1
 
 # Try to build the kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_pyramid_defconfig
+TARGET_KERNEL_CONFIG := pyramid_defconfig
 
 # QCOM Gralloc/Copybit/HWcomposer/Webkit
 COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
