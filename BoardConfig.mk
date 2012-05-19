@@ -38,6 +38,9 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_
 # Try to build the kernel
 TARGET_KERNEL_CONFIG := pyramid_defconfig
 
+# If the kernel build fails to start, use prebuilt
+TARGET_PREBUILT_KERNEL := device/htc/pyramid/prebuilt/kernel
+
 # QCOM Gralloc/Copybit/HWcomposer/Webkit
 COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
 
