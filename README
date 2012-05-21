@@ -26,7 +26,7 @@ Known issues:
 * Camera crashes after some usage causing camera to freeze [Reboot fixes]
 * DSP app [Does not work currently]
 * Switching to different network results into error [Unknown reason for now]
-* MHL disconnects results in an audio routing for all calls to speakers 
+* MHL disconnects results in an audio routing for all calls to speakers [Reboots fixes]
 * Video [AVI Format] does not play in stock gallery app
 * Video [AVI Format] video hardware acceleration does not work
 * Wifi calling not available [There is a wifi-calling app but not functional in CM9]
