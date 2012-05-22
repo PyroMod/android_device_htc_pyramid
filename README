@@ -24,7 +24,7 @@ Known issues:
 * Audio routing between earphone and speaker [Reboot fixes]
 * Bluetooth Issues with ID3 tag
 * Camera crashes after some usage causing camera to freeze [Reboot fixes]
-* DSP app [Does not work currently]
+* DSP app [Workaround is to copy the audio-effects.conf in system/vendor and replace it with the one in system/etc]
 * MHL disconnects results in an audio routing for all calls to speakers [Reboots fixes]
 * Switching to different network results into error [Unknown reason for now]
 * Video chatting apps have working video but does have horrible audio issues [No fixes for now]
