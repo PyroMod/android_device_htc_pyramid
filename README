@@ -25,8 +25,9 @@ Known issues:
 * Bluetooth Issues with ID3 tag
 * Camera crashes after some usage causing camera to freeze [Reboot fixes]
 * DSP app [Does not work currently]
-* Switching to different network results into error [Unknown reason for now]
 * MHL disconnects results in an audio routing for all calls to speakers [Reboots fixes]
+* Switching to different network results into error [Unknown reason for now]
+* Video chatting apps have working video but does have horrible audio issues [No fixes for now]
 * Video [AVI Format] does not play in stock gallery app
 * Video [AVI Format] video hardware acceleration does not work
 * Wifi calling not available [There is a wifi-calling app but not functional in CM9]
