@@ -18,6 +18,7 @@ Working:
 * Video Hardware Acceleration 
 * Video Recording [1080p | 720p | 480p]
 * Wifi
+* Wifi-Calling [Call | Text]
 * Tethering [USB | Wifi]
 
 Known issues:
@@ -30,5 +31,3 @@ Known issues:
 * Video chatting apps have working video but does have horrible audio issues [No fixes for now]
 * Video [AVI Format] does not play in stock gallery app
 * Video [AVI Format] video hardware acceleration does not work
-* Wifi calling not available [There is a wifi-calling app but not functional in CM9]
-
