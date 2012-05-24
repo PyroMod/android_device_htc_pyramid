@@ -13,7 +13,6 @@ on early-fs
     mkdir /devlog 0700 root root
 
     #8x60: firmware
-    rm /vendor
     mkdir /vendor               0771 system system
     mkdir /vendor/firmware      0771 system system
     mkdir /vendor/firmware/misc 0771 system system
