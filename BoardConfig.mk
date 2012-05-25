@@ -31,38 +31,53 @@
 TARGET_BOOTLOADER_BOARD_NAME := pyramid
 
 # Kernel
+BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_KERNEL_PAGE_SIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1
-
-# Try to build the kernel
-TARGET_KERNEL_CONFIG := pyramid_defconfig
-
-# If the kernel build fails to start, use prebuilt
-TARGET_PREBUILT_KERNEL := device/htc/pyramid/prebuilt/kernel
-
-# QCOM Gralloc/Copybit/HWcomposer/Webkit
-COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
 
 #Camera
 BOARD_HAVE_HTC_FFC := true
 
-# Qcom GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := pyramid
 
+COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
+
 # Filesystem
+#cat /proc/emmc
+#dev:        size     erasesize name
+#mmcblk0p32: 000ffa00 00000200 "misc"
+#mmcblk0p21: 00fffc00 00000200 "recovery"
+#mmcblk0p20: 01000000 00000200 "boot"
+#mmcblk0p22: 31fffc00 00000200 "system"
+#mmcblk0p24: 077f5c00 00000200 "cache"
+#mmcblk0p23: 4aabc400 00000200 "userdata"
+#mmcblk0p28: 01400000 00000200 "devlog"
+#mmcblk0p30: 00040000 00000200 "pdata"
+#mmcblk0p25: 00008000 00000200 "extra"
+#mmcblk0p17: 02800000 00000200 "radio"
+#mmcblk0p19: 01000000 00000200 "adsp"
+#mmcblk0p18: 007ffa00 00000200 "radio_config"
+#mmcblk0p26: 00400000 00000200 "modem_st1"
+#mmcblk0p27: 00400000 00000200 "modem_st2"
 
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776192
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838859776
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1252770816
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_FLASH_BLOCK_SIZE := 262144
 
-# Recovery
+# Try to build the kernel
+TARGET_KERNEL_CONFIG := pyramid_defconfig
+
+# Keep this as a fallback
+TARGET_PREBUILT_KERNEL := device/htc/pyramid/prebuilt/kernel
+
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_pyramid
 BOARD_CUSTOM_GRAPHICS:= ../../../device/htc/pyramid/recovery/graphics.c
+BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
+BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
+BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
