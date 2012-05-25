@@ -61,7 +61,8 @@ PRODUCT_COPY_FILES += \
 # GPS and Light
 PRODUCT_PACKAGES += \
     gps.pyramid \
-    lights.pyramid
+    lights.pyramid \
+    sensors.pyramid
 
 ## dsp Audio
 PRODUCT_COPY_FILES += \
