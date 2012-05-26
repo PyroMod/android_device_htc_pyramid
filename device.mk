@@ -123,6 +123,7 @@ PRODUCT_COPY_FILES += device/htc/pyramid/configs/AudioBTID.csv:system/etc/AudioB
 
 # misc
 PRODUCT_COPY_FILES += \
+    device/htc/pyramid/configs/voicemail-conf.xml:system/etc/voicemail-conf.xml \
     device/htc/pyramid/vold.fstab:system/etc/vold.fstab
 
 # media profiles and capabilities spec
