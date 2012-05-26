@@ -4,6 +4,9 @@ Android Device Tree for HTC Pyramid (Sensation)
 Not Compatible:
 * SuperWipe does not work with CM9
 
+Testing:
+* LPA playback [Have not tested yet]
+
 Working:
 * Audio [Headphones | Speaker]
 * Bluetooth [File Transferring | Pairing ]
