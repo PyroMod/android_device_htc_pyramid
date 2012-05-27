@@ -64,6 +64,7 @@ lib/libv8.so
 lib/libhtc_ril.so
 
 # Sensors
+lib/hw/sensors.pyramid.so
 lib/libmllite.so
 lib/libmlplatform.so
 lib/libmpl_jni.so
