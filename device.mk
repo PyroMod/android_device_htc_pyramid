@@ -119,9 +119,6 @@ PRODUCT_COPY_FILES += \
 # HTC BT Audio tune
 PRODUCT_COPY_FILES += device/htc/pyramid/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
-# QC thermald config
-PRODUCT_COPY_FILES += device/htc/pyramid/configs/thermald.conf:system/etc/thermald.conf
-
 # misc
 PRODUCT_COPY_FILES += \
     device/htc/pyramid/configs/voicemail-conf.xml:system/etc/voicemail-conf.xml \
