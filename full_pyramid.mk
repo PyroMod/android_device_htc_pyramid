@@ -21,6 +21,10 @@
 # lines, full and maguro, hence its name.
 #
 
+# GanOptimizer
+PRODUCT_PACKAGES += \
+    GanOptimizer
+
 # Torch
 PRODUCT_PACKAGES += \
     Torch
