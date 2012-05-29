@@ -1,11 +1,8 @@
 Android Device Tree for HTC Pyramid (Sensation)
-========================
+===============================================
 
 Not Compatible:
 * SuperWipe does not work with CM9
-
-Testing:
-* LPA Support is unknown as I have not tested
 
 Working:
 * Audio [Headphones | Speaker]
@@ -36,3 +33,6 @@ Known issues:
 * Video chatting apps have working video but does have horrible audio issues [No fixes for now]
 * Video [AVI Format] does not play in stock gallery app
 * Video [AVI Format] video hardware acceleration does not work
+
+Testing: 
+* LPA Support is possible but no music plays but there is some sound
