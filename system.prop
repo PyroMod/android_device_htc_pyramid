@@ -6,7 +6,6 @@ ro.sf.lcd_density=240
 
 # radio
 mobiledata.interfaces=rmnet0
-ro.ril.radio.svn=2
 ro.telephony.ril.v3=signalstrength
 ro.telephony.default_network=0
 
