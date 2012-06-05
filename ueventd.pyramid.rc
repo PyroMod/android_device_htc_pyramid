@@ -75,6 +75,7 @@
 /dev/qmi1               0640    radio       radio
 /dev/qmi2               0640    radio       radio
 
+/dev/oncrpc/*           0666    root        qcom_oncrpc
 /dev/msm_dsps           0660    system      system
 /dev/rtc0               0600    system      system
 
