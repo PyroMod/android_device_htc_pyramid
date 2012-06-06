@@ -17,6 +17,10 @@ rilswitch.ganlibpath=/system/lib/libganril.so
 # wifi
 wifi.interface=wlan0
 
+# audio
+lpa.decode=true
+lpa.use-stagefright=true
+
 # graphics
 debug.composition.type=dyn
 debug.enabletr=true
