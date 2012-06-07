@@ -35,4 +35,4 @@ Known issues:
 * Video [AVI Format] video hardware acceleration does not work
 
 Testing: 
-* LPA Support is possible but no music plays but there is some sound
+* LPA Support is possible but music keeps getting interrupted 
