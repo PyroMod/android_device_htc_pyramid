@@ -13,6 +13,8 @@ bin/qmuxd
 bin/rmt_storage
 
 # Audio
+lib/hw/audio_policy.msm8660.so
+lib/hw/audio.primary.msm8660.so
 lib/libacdbloader.so
 lib/libacdbmapper.so
 lib/libaudcal.so
