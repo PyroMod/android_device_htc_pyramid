@@ -21,6 +21,7 @@ lib/libhtc_acoustic.so
 
 # Camera
 lib/hw/camera.default.so
+lib/libcamera_client.so
 lib/libcameraface.so
 lib/libcamerapp.so
 lib/libmmipl.so
@@ -38,6 +39,7 @@ lib/libchromatix_s5k3h1gx_zsl.so
 # Graphics
 lib/egl/eglsubAndroid.so
 lib/egl/libEGL_adreno200.so
+lib/egl/libGLES_android.so
 lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so
 lib/egl/libq3dtools_adreno200.so
@@ -59,6 +61,7 @@ lib/libqdp.so
 lib/libqmiservices.so
 lib/libqmi.so
 lib/libv8.so
+xbin/wireless_modem
 
 # Radio
 bin/rild
