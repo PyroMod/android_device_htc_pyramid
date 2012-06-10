@@ -35,6 +35,9 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_KERNEL_PAGE_SIZE := 2048
 
+WIFI_DRIVER_MODULE_NAME          := bcmdhd
+WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcmdhd.ko"
+
 # Camera
 BOARD_HAVE_HTC_FFC := true
 
