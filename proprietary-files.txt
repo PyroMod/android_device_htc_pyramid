@@ -13,9 +13,16 @@ bin/qmuxd
 bin/rmt_storage
 
 # Audio
+bin/snd
+bin/snd8k
+bin/sound8x60
+lib/hw/audio.a2dp.default.so
+lib/hw/audio_policy.default.so
+lib/hw/audio.primary.default.so
 lib/libacdbloader.so
 lib/libacdbmapper.so
 lib/libaudcal.so
+lib/libaudcalwb.so
 lib/libaudioalsa.so
 lib/libhtc_acoustic.so
 
