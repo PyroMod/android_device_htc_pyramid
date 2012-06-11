@@ -2,36 +2,69 @@
 # system.prop for pyramid
 #
 
-ro.sf.lcd_density=240
-
-# radio
-mobiledata.interfaces=rmnet0
-ro.ril.radio.svn=2
-ro.telephony.ril.v3=signalstrength
-ro.telephony.default_network=0
-
-rild.libpath=/system/lib/librilswitch.so
-rilswitch.vendorlibpath=/system/lib/libhtc_ril.so
-rilswitch.ganlibpath=/system/lib/libganril.so
-
-# wifi
-wifi.interface=wlan0
-
-# graphics
-debug.composition.type=dyn
-debug.enabletr=true
-debug.fb.rgb565=0
 debug.sf.hw=1
-ro.opengles.version=131072
+debug.composition.type=dyn
 ro.sf.compbypass.enable=1
+dev.pm.dyn_samplingrate=1
+debug.enabletr=true
 
-# hdmi
+# CM QCOM build lib
 com.qc.hardware=true
 com.qc.hdmi_out=true
 ro.hdmi.enable=true
 
-# qcom cpugovernor service
-dev.pm.dyn_samplingrate=1
+rild.libpath=/system/lib/librilswitch.so
+# HTC v4 ril
+ro.telephony.ril.v3=signalstrength
+
+# Wifi Calling
+rilswitch.vendorlibpath=/system/lib/libhtc_ril.so
+rilswitch.ganlibpath=/system/lib/libganril.so
+
+ro.ril.ecc.HTC-GCC=999,112,997
+ro.ril.ecc.HTC-WWE=999
+ro.ril.ecc.HTC-Dutch=112
+ro.ril.ecc.HTC-FRA=112
+ro.ril.ecc.HTC-ITA=112,911
+ro.ril.ecc.HTC-EastEurope=112
+ro.ril.enable.a52.HTC-ITA=1
+ro.ril.enable.a53.HTC-ITA=1
+ro.ril.enable.a52=0
+ro.ril.enable.a53=1
+
+ro.ril.fast.dormancy.rule=1
+ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
+ro.ril.enable.sdr=1
+ro.ril.enable.amr.wideband=0
+
+# Default network type.
+# 0 => WCDMA preferred.
+ro.telephony.default_network=0
+
+# Modify MTU from 1500 to 1472 on 3G network
+ro.ril.set.mtu1472=1
+
+# For HSDPA low throughput
+ro.ril.disable.power.collapse=1
+
+# For China NEL
+ro.ril.enable.prl.recognition=1
+
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=30
+
+# density in DPI of the LCD of this board. This is used to scale the UI
+# appropriately. If this property is not defined, the default value is 160 dpi.
+ro.sf.lcd_density=240
+
+# For the default value of agps
+ro.ril.def.agps.mode=2
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+ro.opengles.version=131072
+
+mobiledata.interfaces=rmnet0
 
 # UMS
 persist.sys.usb.config=mass_storage,adb

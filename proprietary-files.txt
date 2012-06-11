@@ -7,12 +7,10 @@ bin/charging
 bin/htcbatt
 bin/ipd
 bin/load-modem.sh
-bin/mpdecision
 bin/netmgrd
 bin/netsharing
 bin/qmuxd
 bin/rmt_storage
-bin/thermald
 
 # Audio
 lib/libacdbloader.so
@@ -44,9 +42,9 @@ lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so
 lib/egl/libq3dtools_adreno200.so
 lib/libC2D2.so
+lib/libgsl.so
 lib/libOpenVG.so
 lib/libsc-a2xx.so
-lib/libgsl.so
 
 # Misc libraries
 lib/libdiag.so
@@ -63,14 +61,16 @@ lib/libqmi.so
 lib/libv8.so
 
 # Radio
+bin/rild
 lib/libhtc_ril.so
+lib/libril.so
 
 # Sensors
 lib/hw/sensors.pyramid.so
 lib/libmllite.so
 lib/libmlplatform.so
-lib/libmpl_jni.so
 lib/libmpl.so
+lib/libmpl_jni.so
 
 # Wifi-Calling
 app/HTC-PYRTM-ICS-4.0.1-2.3-49986-4.3.apk

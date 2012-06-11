@@ -21,6 +21,10 @@
 # lines, full and maguro, hence its name.
 #
 
+# GanOptimizer
+PRODUCT_PACKAGES += \
+    GanOptimizer
+
 # Torch
 PRODUCT_PACKAGES += \
     Torch
@@ -37,4 +41,4 @@ PRODUCT_NAME := full_pyramid
 PRODUCT_DEVICE := pyramid
 PRODUCT_BRAND := HTC
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_MODEL := Pyramid
+PRODUCT_MODEL := Sensation
