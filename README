@@ -25,7 +25,6 @@ Working:
 * Tethering [USB | Wifi]
 
 Known issues:
-* Audio routing between earphone and speaker [Reboot fixes]
 * Bluetooth Issues with ID3 tag
 * Camera crashes after some usage causing camera to freeze [Reboot fixes]
 * MHL disconnects results in an audio routing for all calls to speakers [Reboots fixes]
@@ -33,6 +32,3 @@ Known issues:
 * Video chatting apps have working video but does have horrible audio issues [No fixes for now]
 * Video [AVI Format] does not play in stock gallery app
 * Video [AVI Format] video hardware acceleration does not work
-
-Testing: 
-* LPA Support is possible but music keeps getting interrupted 

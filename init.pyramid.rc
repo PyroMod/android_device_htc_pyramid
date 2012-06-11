@@ -6,23 +6,29 @@ on early-init
     # for backwards compatibility
     symlink /mnt/sdcard /sdcard
 
-on early-fs
+on emmc
     mkdir /system
     mkdir /data 0771 system system
     mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
 
-    #8x60: firmware
-    rm /vendor
+    devwait emmc@system
+    mount ext4 emmc@system /system ro noatime barrier=0
+    devwait emmc@userdata
+    mount ext4 emmc@userdata /data noatime nosuid nodev barrier=0 noauto_da_alloc
+    mount ext4 emmc@cache /cache noatime nosuid nodev barrier=0
+    mount ext4 emmc@devlog /devlog noatime nosuid nodev barrier=0
+
+    # 8x60: mount radio partition and create links for modem/q6 firmwares
     mkdir /vendor               0771 system system
     mkdir /vendor/etc           0771 system system
     mkdir /vendor/firmware      0771 system system
     mkdir /vendor/firmware/misc 0771 system system
     mkdir /vendor/firmware/adsp 0771 system system
-    wait /dev/block/mmcblk0p17
-    wait /dev/block/mmcblk0p19
-    mount vfat /dev/block/mmcblk0p17 /vendor/firmware/misc ro shortname=lower
-    mount vfat /dev/block/mmcblk0p19 /vendor/firmware/adsp ro shortname=lower
+    devwait emmc@radio
+    devwait emmc@adsp
+    mount vfat emmc@radio /vendor/firmware/misc ro shortname=lower
+    mount vfat emmc@adsp /vendor/firmware/adsp ro shortname=lower
     symlink /vendor/firmware/adsp/q6.b09 /vendor/firmware/q6.b09
     symlink /vendor/firmware/adsp/q6.b08 /vendor/firmware/q6.b08
     symlink /vendor/firmware/adsp/q6.b07 /vendor/firmware/q6.b07
@@ -46,11 +52,7 @@ on early-fs
     symlink /vendor/firmware/misc/modem.b00 /vendor/firmware/modem.b00
     symlink /vendor/firmware/misc/modem.mdt /vendor/firmware/modem.mdt
 
-    mount ext4 /dev/block/mmcblk0p22 /system wait ro data=ordered noauto_da_alloc
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
-    mount ext4 /dev/block/mmcblk0p23 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p24 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
 
     symlink /system/vendor/firmware/fw_bcmdhd.bin /vendor/firmware/fw_bcmdhd.bin
     symlink /system/vendor/firmware/fw_bcmdhd_apsta.bin /vendor/firmware/fw_bcmdhd_apsta.bin
@@ -73,9 +75,7 @@ on post-fs-data
     chown system system /dev/mpuirq
     chown system system /dev/timerirq
 
-    mkdir /data/radio 0770 radio radio
-
-    #wifi
+    # wifi
     mkdir /data/misc 1771 system misc
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
@@ -123,7 +123,7 @@ on init
     chmod 0664 /sys/devices/virtual/graphics/fb1/video_mode
     chmod 0664 /sys/devices/virtual/graphics/fb1/format_3d
 
-    # Change owner and group for media server and surface flinger
+    # Change owner and group for media server and surfaceflinger
     chown system system /sys/devices/virtual/graphics/fb1/format_3d
 
     # for wireless modem
@@ -185,9 +185,6 @@ on init
     write /sys/module/lowmemorykiller/parameters/minfree 2048,3072,4096,6144,8192,12288
     write /sys/module/lowmemorykiller/parameters/minfile 2048,3072,4096,6144,8192,12288
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
-
-    # HTC Phone Call
-    chown radio /sys/module/gpio_event/parameters/phone_call_status
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
