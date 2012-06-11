@@ -9,22 +9,22 @@ bin/ipd
 bin/load-modem.sh
 bin/netmgrd
 bin/netsharing
-bin/qmuxd
 bin/rmt_storage
+bin/qmuxd
 
 # Audio
 bin/snd
 bin/snd8k
 bin/sound8x60
-lib/hw/audio.a2dp.default.so
-lib/hw/audio_policy.default.so
-lib/hw/audio.primary.default.so
 lib/libacdbloader.so
 lib/libacdbmapper.so
 lib/libaudcal.so
 lib/libaudcalwb.so
 lib/libaudioalsa.so
 lib/libhtc_acoustic.so
+lib/hw/audio.a2dp.default.so
+lib/hw/audio_policy.default.so
+lib/hw/audio.primary.default.so
 
 # Camera
 lib/hw/camera.default.so
@@ -45,13 +45,10 @@ lib/libchromatix_s5k3h1gx_zsl.so
 # Graphics
 lib/egl/eglsubAndroid.so
 lib/egl/libEGL_adreno200.so
-lib/egl/libGLES_android.so
 lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so
 lib/egl/libq3dtools_adreno200.so
 lib/libC2D2.so
-lib/libgsl.so
-lib/libOpenVG.so
 lib/libsc-a2xx.so
 
 # Misc libraries
@@ -60,28 +57,22 @@ lib/libdll.so
 lib/libdsi_netctrl.so
 lib/libdsutils.so
 lib/libgemini.so
+lib/libgsl.so
 lib/libidl.so
 lib/libmm-color-convertor.so
 lib/libnetmgr.so
+lib/libOpenVG.so
 lib/libqdp.so
 lib/libqmiservices.so
 lib/libqmi.so
 lib/libv8.so
 
 # Radio
-bin/rild
 lib/libhtc_ril.so
-lib/libril.so
 
 # Sensors
 lib/hw/sensors.pyramid.so
 lib/libmllite.so
 lib/libmlplatform.so
-lib/libmpl.so
 lib/libmpl_jni.so
-
-# Wifi-Calling
-app/HTC-PYRTM-ICS-4.0.1-2.3-49986-4.3.apk
-lib/libganril.so
-lib/libkineto.so
-lib/librilswitch.so
+lib/libmpl.so

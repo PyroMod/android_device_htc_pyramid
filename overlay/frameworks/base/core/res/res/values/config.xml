@@ -83,15 +83,15 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>81</item>
-        <item>81</item>
-        <item>81</item>
-        <item>112</item>
-        <item>143</item>
-        <item>163</item>
-        <item>186</item>
-        <item>208</item>
-        <item>231</item>
+        <item>56</item>
+        <item>56</item>
+        <item>56</item>
+        <item>90</item>
+        <item>117</item>
+        <item>142</item>
+        <item>170</item>
+        <item>198</item>
+        <item>227</item>
         <item>255</item>
     </integer-array>
 
@@ -129,7 +129,7 @@
         <item>0</item>
     </integer-array>
 
-    <!-- Needed for capacitive buttons to work without toggling auto-brightness -->
+<!-- Needed for capacitive buttons to work without toggling auto-brightness -->
     <bool name="config_autoBrightnessButtonKeyboard">false</bool>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
