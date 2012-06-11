@@ -72,11 +72,18 @@ PRODUCT_COPY_FILES += \
     device/htc/pyramid/dsp/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
     device/htc/pyramid/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
     device/htc/pyramid/dsp/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
+    device/htc/pyramid/dsp/AIC3254_REG_DualMic_XB.csv:system/etc/AIC3254_REG_DualMic_XB.csv \
+    device/htc/pyramid/dsp/AIC3254_REG_DualMic_XC.csv:system/etc/AIC3254_REG_DualMic_XC.csv \
     device/htc/pyramid/dsp/CodecDSPID.txt:system/etc/CodecDSPID.txt \
     device/htc/pyramid/dsp/CodecDSPID_NEL.txt:system/etc/CodecDSPID_NEL.txt \
     device/htc/pyramid/dsp/CodecDSPID_WB.txt:system/etc/CodecDSPID_WB.txt \
+    device/htc/pyramid/dsp/HP_Audio.csv:system/etc/HP_Audio.csv \
+    device/htc/pyramid/dsp/HP_Video.csv:system/etc/HP_Video.csv \
+    device/htc/pyramid/dsp/SPK_Combination.csv:system/etc/SPK_Combination.csv \
     device/htc/pyramid/dsp/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv \
+    device/htc/pyramid/dsp/TPA2051_CFG_XB.csv:system/etc/TPA2051_CFG_XB.csv \
     device/htc/pyramid/dsp/TPA2051_CFG_XC.csv:system/etc/TPA2051_CFG_XC.csv \
+    device/htc/pyramid/dsp/soundimage/Sound_Beats.txt:system/etc/soundimage/Sound_Beats.txt \
     device/htc/pyramid/dsp/soundimage/Sound_MFG.txt:system/etc/soundimage/Sound_MFG.txt \
     device/htc/pyramid/dsp/soundimage/Sound_Original_Recording.txt:system/etc/soundimage/Sound_Original_Recording.txt \
     device/htc/pyramid/dsp/soundimage/Sound_Original_SPK.txt:system/etc/soundimage/Sound_Original_SPK.txt \
