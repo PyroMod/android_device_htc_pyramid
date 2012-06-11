@@ -68,7 +68,6 @@ lib/libqdp.so
 lib/libqmiservices.so
 lib/libqmi.so
 lib/libv8.so
-xbin/wireless_modem
 
 # Radio
 bin/rild
