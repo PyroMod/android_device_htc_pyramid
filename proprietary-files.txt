@@ -28,7 +28,6 @@ lib/libhtc_acoustic.so
 
 # Camera
 lib/hw/camera.default.so
-lib/libcamera_client.so
 lib/libcameraface.so
 lib/libcamerapp.so
 lib/libmmipl.so
