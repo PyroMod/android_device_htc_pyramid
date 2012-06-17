@@ -82,3 +82,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Multitouch games need this:
 BOARD_USE_LEGACY_TOUCHSCREEN := true
+
+# Bootanimation
+TARGET_BOOTANIMATION_PRELOAD := true
