@@ -65,7 +65,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 # Try to build the kernel
-TARGET_KERNEL_CONFIG := pyramid_defconfig
+TARGET_KERNEL_CONFIG := bricked_defconfig
 
 # Keep this as a fallback
 TARGET_PREBUILT_KERNEL := device/htc/pyramid/prebuilt/kernel
