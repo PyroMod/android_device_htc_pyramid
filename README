@@ -14,6 +14,7 @@ Working:
 * GPS
 * HDMI [MHL | Video and Audio]
 * LED [Flash | Notification Lights]
+* Low Power Audio
 * Messaging [Multimedia | Text]
 * Radio
 * Tethering
@@ -23,9 +24,6 @@ Working:
 * Wifi
 * Wifi-Calling [Call | Text]
 * Tethering [USB | Wifi]
-
-Not Working:
-* Low Power Audio [Results in interruptions while playing music]
 
 Known issues:
 * Audio routing between earphone and speaker [Reboot fixes]
