@@ -6,12 +6,10 @@ etc/vpimg
 bin/charging
 bin/htcbatt
 bin/ipd
-bin/mpdecision
 bin/netmgrd
 bin/netsharing
 bin/qmuxd
 bin/rmt_storage
-bin/thermald
 
 # Audio
 lib/libacdbloader.so
@@ -62,9 +60,7 @@ lib/libqmi.so
 lib/libv8.so
 
 # Radio
-bin/rild
 lib/libhtc_ril.so
-lib/libril.so
 
 # Sensors
 lib/hw/sensors.pyramid.so
