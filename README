@@ -30,6 +30,7 @@ Known issues:
 * Bluetooth Issues with ID3 tag
 * Camera crashes after some usage causing camera to freeze [Reboot fixes]
 * CRT Animation has a slight pause showing homescreen [Only for a split second]
+* Low Power Audio with DSPManager seems to cause some excess bass [No fix for now but will look into it]
 * MHL disconnects results in an audio routing for all calls to speakers [Reboots fixes]
 * Switching to different network results into error [Unknown reason for now]
 * Video chatting apps have working video but does have horrible audio issues [No fixes for now]
