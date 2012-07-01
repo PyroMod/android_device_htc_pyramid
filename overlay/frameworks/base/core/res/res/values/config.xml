@@ -224,3 +224,4 @@
          kill the foreground app. -->
     <integer name="config_backKillTimeout">1500</integer>
 
+</resources>
