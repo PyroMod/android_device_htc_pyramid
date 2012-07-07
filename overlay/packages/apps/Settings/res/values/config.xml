@@ -14,7 +14,10 @@
      limitations under the License.
 -->
 
+<!-- pyramid-specific settings app resources. -->
 <resources>
+
     <!-- LED Flashlight -->
     <bool name="has_led_flash">true</bool>
+
 </resources>
