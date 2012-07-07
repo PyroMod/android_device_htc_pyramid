@@ -104,12 +104,11 @@ on init
     setprop ro.bt.bdaddr_path /sys/module/htc_bdaddress/parameters/bdaddress
 
     # Permissions for Liblights.
-    chown system system /sys/class/leds/amber/brightness
     chown system system /sys/class/leds/green/brightness
-    chown system system /sys/class/leds/blue/brightness
-    chown system system /sys/class/leds/button-backlight/brightness
-    chown system system /sys/class/leds/amber/blink
     chown system system /sys/class/leds/green/blink
+    chown system system /sys/class/leds/amber/brightness
+    chown system system /sys/class/leds/amber/blink
+    chown system system /sys/class/leds/button-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
 
     # Flashlight
@@ -299,6 +298,7 @@ service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     class main
     user root
     disabled
+    oneshot
 
 on property:init.svc.bootanim=stopped
     start qcom-post-boot
