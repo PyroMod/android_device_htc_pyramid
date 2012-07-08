@@ -42,6 +42,7 @@
 <!ELEMENT ImageDecoding EMPTY>
 <!ATTLIST ImageDecoding memCap CDATA #REQUIRED>
 <!ELEMENT Camera EMPTY>
+<!ATTLIST Camera previewFrameRate CDATA #REQUIRED>
 <!ELEMENT EncoderOutputFileFormat EMPTY>
 <!ATTLIST EncoderOutputFileFormat name (mp4|3gp) #REQUIRED>
 <!ELEMENT VideoEncoderCap EMPTY>
@@ -116,7 +117,7 @@
         <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="5000000"
-                   width="720"
+                   width="640"
                    height="480"
                    frameRate="30" />
             <Audio codec="aac"
@@ -178,7 +179,7 @@
         <EncoderProfile quality="timelapse480p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="5000000"
-                   width="720"
+                   width="640"
                    height="480"
                    frameRate="30" />
             <!-- audio setting is ignored -->
@@ -246,11 +247,11 @@
                    sampleRate="48000"
                    channels="1" />
         </EncoderProfile>
-<!--
+
         <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="5000000"
-                   width="720"
+                   width="640"
                    height="480"
                    frameRate="30" />
             <Audio codec="aac"
@@ -270,7 +271,7 @@
                    sampleRate="48000"
                    channels="1" />
         </EncoderProfile>
--->
+
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="192000"
@@ -297,16 +298,13 @@
                    channels="1" />
         </EncoderProfile>
 
-<!--
         <EncoderProfile quality="timelapse480p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="5000000"
-                   width="720"
+                   width="640"
                    height="480"
                    frameRate="30" />
--->
             <!-- audio setting is ignored -->
-<!--
             <Audio codec="aac"
                    bitRate="96000"
                    sampleRate="48000"
@@ -319,19 +317,19 @@
                    width="1280"
                    height="720"
                    frameRate="30" />
--->
             <!-- audio setting is ignored -->
-<!--
             <Audio codec="aac"
                    bitRate="96000"
                    sampleRate="48000"
                    channels="1" />
         </EncoderProfile>
--->
+
         <ImageEncoding quality="90" />
         <ImageEncoding quality="80" />
         <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
+
+        <Camera previewFrameRate="0" />
 
     </CamcorderProfiles>
 
