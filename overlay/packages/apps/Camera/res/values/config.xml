@@ -16,8 +16,8 @@
 
 <!-- pyramid-specific camera app resources. -->
 <resources>
-
     <!-- HTC Camcorder Mode -->
     <bool name="needsHTCCamMode">true</bool>
-
+    <!-- Restart the preview on picture taken -->
+    <bool name="restartPreviewOnPictureTaken">true</bool>
 </resources>
