@@ -140,6 +140,7 @@ $(call inherit-product, device/htc/pyramid/media_a1026.mk)
 ## htc audio settings
 $(call inherit-product, device/htc/pyramid/media_htcaudio.mk)
 
-$(call inherit-product, frameworks/base/build/phone-xhdpi-1024-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
+
