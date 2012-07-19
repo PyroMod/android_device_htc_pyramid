@@ -32,6 +32,7 @@ PRODUCT_COPY_FILES += \
 
 ## ramdisk stuffs
 PRODUCT_COPY_FILES += \
+    device/htc/pyramid/fstab.pyramid:root/fstab.pyramid \
     device/htc/pyramid/init.pyramid.rc:root/init.pyramid.rc \
     device/htc/pyramid/init.pyramid.usb.rc:root/init.pyramid.usb.rc \
     device/htc/pyramid/ueventd.pyramid.rc:root/ueventd.pyramid.rc
