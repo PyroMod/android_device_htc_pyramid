@@ -67,6 +67,9 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 # Try to build the kernel
 TARGET_KERNEL_CONFIG := pyramid_defconfig
 
+# Keep this as a fallback
+TARGET_PREBUILT_KERNEL := device/htc/pyramid/prebuilt/kernel
+
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_pyramid
 BOARD_CUSTOM_GRAPHICS:= ../../../device/htc/pyramid/recovery/graphics.c
