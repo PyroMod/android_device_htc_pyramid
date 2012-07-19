@@ -59,6 +59,7 @@ PRODUCT_COPY_FILES += \
 
 # Custom media config for HTC camera
 PRODUCT_COPY_FILES += \
+    device/htc/msm8660-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
     device/htc/pyramid/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # GPS and Light
@@ -133,6 +134,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
     device/htc/pyramid/prebuilt/bcmdhd.ko:/system/lib/modules/bcmdhd.ko \
     device/htc/pyramid/prebuilt/scsi_wait_scan.ko:/system/lib/modules/scsi_wait_scan.ko
+
+# call the proprietary setup
+$(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
 
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/pyramid/media_a1026.mk)
