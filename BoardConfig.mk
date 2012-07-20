@@ -39,6 +39,9 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := pyramid
 
 COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
 
+# RIL
+BOARD_PROVIDES_LIBRIL := true
+
 # Filesystem
 #cat /proc/emmc
 #dev:        size     erasesize name
