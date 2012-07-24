@@ -14,29 +14,21 @@ Working:
 * GPS
 * HDMI [MHL | Video and Audio]
 * LED [Flash | Notification Lights]
-* Low Power Audio
+* Low Power Audio (LPA)
 * Messaging [Multimedia | Text]
 * Radio
-* Tethering
+* Tethering [Wifi | USB]
 * Torch
 * Video Hardware Acceleration 
 * Video Recording [1080p | 720p | 480p]
 * Wifi
 * Wifi-Calling [Call | Text]
-* Tethering [Wifi]
 
 Known issues:
-* Audio routing between earphone and speaker [Reboot fixes]
 * Bluetooth Issues with ID3 tag
-* Camera crashes after some usage causing camera to freeze [Reboot fixes]
-* CRT Animation has a slight pause showing homescreen [Only for a split second]
-* Low Power Audio with DSPManager seems to cause some excess bass [No fix for now but will look into it]
 * MHL disconnects results in an audio routing for all calls to speakers [Reboots fixes]
 * Switching to different network results into error [Unknown reason for now]
 * Video chatting apps have working video but does have horrible audio issues [No fixes for now]
 * Video [AVI Format] does not play in stock gallery app
 * Video [AVI Format] video hardware acceleration does not work
-
-Not working:
-* USB Tethering does not seem to be working at the moment [Looking for a fix]
 
