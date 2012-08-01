@@ -42,6 +42,8 @@ net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960
 net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960
 net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
 persist.cust.tel.eons=1
+persist.telephony.support.ipv4=1
+persist.telephony.support.ipv6=1
 ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
 ro.ril.ecc.HTC-Dutch=112
 ro.ril.ecc.HTC-EastEurope=112
@@ -105,10 +107,7 @@ ro.qualcomm.cabl=1
 # Quicker Boot
 ro.config.hw_quickpoweron=true
 
-# For No Ring Delay
+# Zero Ring Delay
 ro.telephony.call_ring.delay=0
 ring.delay=0
 
-# Support IPV4 and IPV6
-persist.telephony.support.ipv4=1
-persist.telephony.support.ipv6=1
