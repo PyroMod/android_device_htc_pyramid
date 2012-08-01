@@ -24,6 +24,9 @@ Working:
 * Wifi
 * Wifi-Calling [Call | Text]
 
+Not working:
+* Wifi-Calling [MMS]
+
 Known issues:
 * Bluetooth Issues with ID3 tag
 * MHL disconnects results in an audio routing for all calls to speakers [Reboots fixes]
@@ -31,4 +34,5 @@ Known issues:
 * Video chatting apps have working video but does have horrible audio issues [No fixes for now]
 * Video [AVI Format] does not play in stock gallery app
 * Video [AVI Format] video hardware acceleration does not work
+
 
