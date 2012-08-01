@@ -2,72 +2,91 @@
 # system.prop for pyramid
 #
 
-debug.sf.hw=1
+# Graphics
 debug.composition.type=dyn
-ro.sf.compbypass.enable=1
-dev.pm.dyn_samplingrate=1
 debug.enabletr=true
+debug.sf.hw=1
+ro.sf.compbypass.enable=1
+video.accelerate.hw=1
 
-lpa.use-stagefright=true
+# Streaming
+media.stagefright.enable-http=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-player=true
+media.stagefright.enable-record=false
+media.stagefright.enable-scan=true
+
+# Low Power Audio
 lpa.decode=true
+lpa.use-stagefright=true
 
-# CM QCOM build lib
+# HDMI
 com.qc.hardware=true
 com.qc.hdmi_out=true
 ro.hdmi.enable=true
 
+# Radio
+mobiledata.interfaces=rmnet0
 rild.libpath=/system/lib/librilswitch.so
-# HTC v4 ril
+ro.ril.radio.svn=2
+ro.telephony.default_network=0
 ro.telephony.ril.v3=signalstrength
 
 # Wifi Calling
 rilswitch.vendorlibpath=/system/lib/libhtc_ril.so
 rilswitch.ganlibpath=/system/lib/libganril.so
 
-ro.ril.ecc.HTC-GCC=999,112,997
-ro.ril.ecc.HTC-WWE=999
+persist.cust.tel.eons=1
+ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
 ro.ril.ecc.HTC-Dutch=112
-ro.ril.ecc.HTC-FRA=112
-ro.ril.ecc.HTC-ITA=112,911
 ro.ril.ecc.HTC-EastEurope=112
+ro.ril.ecc.HTC-FRA=112
+ro.ril.ecc.HTC-GCC=999,112,997
+ro.ril.ecc.HTC-ITA=112,911
+ro.ril.ecc.HTC-WWE=999
 ro.ril.enable.a52.HTC-ITA=1
 ro.ril.enable.a53.HTC-ITA=1
 ro.ril.enable.a52=0
 ro.ril.enable.a53=1
-
-ro.ril.fast.dormancy.rule=1
-ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
-ro.ril.enable.sdr=1
-ro.ril.enable.amr.wideband=0
-
-# Modify MMS APN retry timer from 5s to 2s.
-ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
-
-# pyramid RF team request
+ro.ril.enable.amr.wideband=1
 ro.ril.enable.dtm=0
+ro.ril.enable.sdr=1
+ro.ril.fast.dormancy.rule=1
 ro.ril.gprsclass=12
 ro.ril.hsdpa.category=10
 ro.ril.hsupa.category=6
 ro.ril.hsxpa=2
 ro.ril.radio.svn=2
-
-# Default network type.
-# 0 => WCDMA preferred.
-ro.telephony.default_network=0
-
-# Modify MTU from 1500 to 1472 on 3G network
 ro.ril.set.mtu1472=1
+
+# Modify MMS APN retry timer from 5s to 2s.
+ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
 
 # For HSDPA low throughput
 ro.ril.disable.power.collapse=1
 
+# Enable Sleep Mode
+pm.sleep_mode=1
+
 # For China NEL
 ro.ril.enable.prl.recognition=1
 
+# Wifi
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=30
 
-# density in DPI of the LCD of this board. This is used to scale the UI
+# 
+ro.config.hw_quickpoweron=true
+
+# For No Ring Delay
+ro.telephony.call_ring.delay=0
+ring.delay=0
+
+# Support IPV4 and IPV6
+persist.telephony.support.ipv4=1
+persist.telephony.support.ipv6=1
+
+# Density in DPI of the LCD of this board. This is used to scale the UI
 # appropriately. If this property is not defined, the default value is 160 dpi.
 ro.sf.lcd_density=240
 
@@ -78,10 +97,11 @@ ro.ril.def.agps.mode=2
 # This is a 16.16 fixed point number
 ro.opengles.version=131072
 
-mobiledata.interfaces=rmnet0
+# QCOM CPUGovernor Service
+dev.pm.dyn_samplingrate=1
 
 # UMS
 persist.sys.usb.config=mass_storage,adb
 
-# System property for cabl
+# System Property for Cabl
 ro.qualcomm.cabl=1
