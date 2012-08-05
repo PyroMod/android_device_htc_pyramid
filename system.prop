@@ -104,6 +104,9 @@ persist.sys.usb.config=mass_storage,adb
 # System Property for Cabl
 ro.qualcomm.cabl=1
 
+# Lock Launcher in memory
+ro.HOME_APP_ADJ=1
+
 # Quicker Boot
 ro.config.hw_quickpoweron=true
 
