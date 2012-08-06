@@ -57,7 +57,7 @@ ro.ril.enable.a52=0
 ro.ril.enable.a53=1
 ro.ril.enable.amr.wideband=1
 ro.ril.enable.sdr=1
-ro.ril.fast.dormancy.rule=1
+ro.ril.fast.dormancy.rule=0
 ro.ril.set.mtu1472=1
 
 # Modify MMS APN retry timer from 5s to 2s.
@@ -75,7 +75,7 @@ ro.ril.radio.svn=2
 pm.sleep_mode=1
 
 # For HSDPA low throughput
-ro.ril.disable.power.collapse=1
+ro.ril.disable.power.collapse=0
 
 # For China NEL
 ro.ril.enable.prl.recognition=1
