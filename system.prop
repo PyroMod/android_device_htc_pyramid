@@ -57,7 +57,7 @@ ro.ril.enable.a52=0
 ro.ril.enable.a53=1
 ro.ril.enable.amr.wideband=1
 ro.ril.enable.sdr=1
-ro.ril.fast.dormancy.rule=0
+ro.ril.fast.dormancy.rule=1
 ro.ril.set.mtu1472=1
 
 # Modify MMS APN retry timer from 5s to 2s.
