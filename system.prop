@@ -36,11 +36,11 @@ ro.telephony.ril.v3=signalstrength
 rilswitch.vendorlibpath=/system/lib/libhtc_ril.so
 rilswitch.ganlibpath=/system/lib/libganril.so
 
-net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
-net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
-net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960
-net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960
-net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
 persist.cust.tel.eons=1
 persist.telephony.support.ipv4=1
 persist.telephony.support.ipv6=1
@@ -104,13 +104,10 @@ persist.sys.usb.config=mass_storage,adb
 # System Property for Cabl
 ro.qualcomm.cabl=1
 
-# Lock Launcher in memory
-ro.HOME_APP_ADJ=1
-
 # Quicker Boot
 ro.config.hw_quickpoweron=true
 
 # Zero Ring Delay
-ro.telephony.call_ring.delay=0
 ring.delay=0
+ro.telephony.call_ring.delay=0
 
