@@ -123,17 +123,6 @@ PRODUCT_COPY_FILES += device/htc/pyramid/configs/AudioBTID.csv:system/etc/AudioB
 PRODUCT_COPY_FILES += \
     device/htc/pyramid/vold.fstab:system/etc/vold.fstab
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/pyramid/prebuilt/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel \
-    device/htc/pyramid/prebuilt/bcmdhd.ko:/system/lib/modules/bcmdhd.ko \
-    device/htc/pyramid/prebuilt/scsi_wait_scan.ko:/system/lib/modules/scsi_wait_scan.ko
-
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/pyramid/media_a1026.mk)
 
