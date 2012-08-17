@@ -15,6 +15,9 @@
 #
 
 PRODUCT_PROPERTY_OVERRIDES += \
+      dalvik.vm.dexopt-flags=m=y
+      dalvik.vm.lockprof.threshold=500 \
+      debug.performance.tuning=1 \
       htc.audio.alt.enable=0 \
       htc.audio.hac.enable=0 \
       media.a1026.enableA1026=0 \
@@ -30,14 +33,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
       persist.sys.purgeable_assets=1 \
       persist.sys.shutdown.mode=hibernate \
       persist.sys.usb.config=mass_storage,adb \
-      persist.sys.use.dithering=1 \
       persist.telephony.support.ipv4=1 \
-      persist.telephony.support.ipv=1 \
+      persist.telephony.support.ipv6=1 \
       pm.sleep_mode=1 \
       ring.delay=0 \
+      ro.com.google.locationfeatures=1 \
       ro.config.hw_quickpoweron=true \
       ro.config.nocheckin=1 \
       ro.gsm.2nd_data_retry_config=max_retries=3,2000,2000,2000 \
+      ro.media.dec.aud.flac.enabled=1 \
+      ro.media.dec.aud.wma.enabled=1 \
+      ro.media.dec.vid.avi.enabled=1 \
+      ro.media.dec.vid.wmv.enabled=1 \
       ro.ril.def.agps.mode=2 \
       ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420 \
       ro.ril.disable.power.collapse=0 \
@@ -61,6 +68,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
       ro.ril.hsupa.category=6 \
       ro.ril.hsxpa=2 \
       ro.ril.set.mtu1472=1 \
+      ro.setupwizard.enable_bypass=1 \
       ro.telephony.call_ring.delay=0 \
       ro.telephony.default_network=0 \
       ro.telephony.ril.v3=signalstrength \
