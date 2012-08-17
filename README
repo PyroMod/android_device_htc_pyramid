@@ -4,35 +4,33 @@ Android Device Tree for HTC Pyramid (Sensation)
 Not Compatible:
 * SuperWipe does not work with CM9
 
-Working:
-* Audio [Headphones | Speaker]
-* Bluetooth [File Transferring | Pairing ]
-* Camera
-* CRT Animation
-* DSP Manager
-* Front Facing Camera [Taking Pictures and Video Recording]
-* GPS
-* HDMI [MHL | Video and Audio]
-* LED [Flash | Notification Lights]
-* Low Power Audio (LPA)
-* Messaging [Multimedia | Text]
-* Radio
-* Tethering [Wifi | USB]
-* Torch
-* Video Hardware Acceleration 
-* Video Recording [1080p | 720p | 480p]
-* Wifi
-* Wifi-Calling [Call | Text]
+Working
+- Audio [Headphones | Speaker]
+- Bluetooth [File Transferring | Pairing ]
+- Camera
+- CRT Animation
+- DSP Manager
+- Front Facing Camera [Taking Pictures and Video Recording]
+- GPS
+- HDMI [MHL | Video and Audio]
+- LED [Flash | Notification Lights]
+- Low Power Audio (LPA)
+- Messaging [Multimedia | Text]
+- Radio
+- Tethering [Wifi | USB]
+- Torch
+- Video Hardware Acceleration 
+- Video Recording [1080p | 720p | 480p]
+- Wifi
+- Wifi-Calling [Call | Text]
 
-Not working:
-* Wifi-Calling [MMS]
+Not Working
+- Wifi-Calling [MMS]
+- MHL [I do not own one so can't be sure if it works or not]
 
-Known issues:
-* Bluetooth Issues with ID3 tag
-* MHL disconnects results in an audio routing for all calls to speakers [Reboots fixes]
-* Switching to different network results into error [Unknown reason for now]
-* Video chatting apps have working video but does have horrible audio issues [No fixes for now]
-* Video [AVI Format] does not play in stock gallery app
-* Video [AVI Format] video hardware acceleration does not work
-
-
+Known Issues
+- Bluetooth Issues with ID3 tag
+- MMS over Wifi-Calling might not work [Looking for a solution]
+- Switching to different network results into error [Looking for a solution]
+- Video [AVI Format] does not play in stock gallery app
+- Video [AVI Format] video hardware acceleration does not work
