@@ -2,9 +2,48 @@
 # system.prop for pyramid
 #
 
+# Graphics
+debug.composition.type=dyn
+debug.enabletr=true
+debug.fb.rgb565=0
+debug.sf.hw=1
+ro.sf.compbypass.enable=1
+
+# Low Power Audio
+lpa.decode=true
+lpa.use-stagefright=true
+
+# HDMI
+com.qc.hardware=true
+com.qc.hdmi_out=true
+ro.hdmi.enable=true
+
 # Radio
+mobiledata.interfaces=rmnet0
 rild.libpath=/system/lib/librilswitch.so
+ro.telephony.default_network=0
+ro.telephony.ril.v3=signalstrength
 
 # Wifi Calling
-rilswitch.ganlibpath=/system/lib/libganril.so
 rilswitch.vendorlibpath=/system/lib/libhtc_ril.so
+rilswitch.ganlibpath=/system/lib/libganril.so
+
+# Wifi
+wifi.interface=wlan0
+
+# Density in DPI of the LCD of this board. This is used to scale the UI
+# appropriately. If this property is not defined, the default value is 160 dpi.
+ro.sf.lcd_density=240
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+ro.opengles.version=131072
+
+# QCOM CPUGovernor Service
+dev.pm.dyn_samplingrate=1
+
+# UMS
+persist.sys.usb.config=mass_storage,adb
+
+# System Property for Cabl
+ro.qualcomm.cabl=1

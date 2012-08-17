@@ -123,6 +123,8 @@ PRODUCT_COPY_FILES += device/htc/pyramid/configs/AudioBTID.csv:system/etc/AudioB
 PRODUCT_COPY_FILES += \
     device/htc/pyramid/vold.fstab:system/etc/vold.fstab
 
+$(call inherit-product, device/htc/pyramid/pyromod.mk)
+
 $(call inherit-product, frameworks/base/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
