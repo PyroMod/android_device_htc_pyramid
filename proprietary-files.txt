@@ -4,6 +4,7 @@ etc/vpimg
 
 # Executable files
 bin/charging
+bin/hdmid
 bin/htcbatt
 bin/ipd
 bin/netmgrd

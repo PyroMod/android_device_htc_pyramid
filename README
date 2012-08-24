@@ -25,12 +25,11 @@ Working
 - Wifi-Calling [Call | Text]
 
 Not Working
+- HDMI Out
+- Switching to different network results into error
 - Wifi-Calling [MMS]
-- MHL [I do not own one so can't be sure if it works or not]
 
 Known Issues
 - Bluetooth Issues with ID3 tag
-- MMS over Wifi-Calling might not work [Looking for a solution]
-- Switching to different network results into error [Looking for a solution]
 - Video [AVI Format] does not play in stock gallery app
 - Video [AVI Format] video hardware acceleration does not work
