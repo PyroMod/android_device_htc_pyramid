@@ -92,7 +92,7 @@ on boot
     chown system /sys/devices/platform/rs300000a7.65536/force_sync
     chown system /sys/devices/platform/rs300000a7.65536/sync_sts
 
-    # bluetooth
+    # Bluetooth
     chown bluetooth bluetooth /sys/module/htc_bdaddress/parameters/bdaddress
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
@@ -105,26 +105,13 @@ on boot
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
-    # audio
+    # Audio
     mkdir /data/audio 0770 media audio
     chmod 2770 /data/audio
 
-    # radio
+    # Radio
     mkdir /data/radio 0770 radio radio
     chmod 2770 /data/radio
-
-    # Set indication (checked by vold) that we have finished this action
-    setprop vold.post_fs_data_done 1
-
-on init
-    # Bluetooth power up/down interface
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-    chmod 0660                /sys/class/rfkill/rfkill0/state
-
-    # Bluetooth MAC address programming
-    chown bluetooth bluetooth /sys/module/htc_bdaddress/parameters/bdaddress
-    setprop ro.bt.bdaddr_path /sys/module/htc_bdaddress/parameters/bdaddress
 
     # Permissions for Liblights.
     chown system system /sys/class/leds/green/brightness
@@ -140,14 +127,6 @@ on init
 
     # Create symlink for fb1 as HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
-
-    # Remove write permissions to video related nodes
-    chmod 0664 /sys/devices/virtual/graphics/fb1/hpd
-    chmod 0664 /sys/devices/virtual/graphics/fb1/video_mode
-    chmod 0664 /sys/devices/virtual/graphics/fb1/format_3d
-
-    # Change owner and group for media server and surface flinger
-    chown system system /sys/devices/virtual/graphics/fb1/format_3d
 
     # For wireless modem
     chown system system /sys/module/serial/parameters/modem_enabled
@@ -165,17 +144,6 @@ on init
     chown system system /sys/class/optical_sensors/proximity/ps_led
     chown system system /sys/class/optical_sensors/proximity/ps_test_mode
 
-    # For CM performance
-    chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
-    chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
-    chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq
-
-    chown system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
-
-    # For simlock
-    chown radio radio /dev/simlock
-    chmod 0660 /dev/simlock
-
     # For charging function
     chown radio radio /sys/module/htc_battery_8x60/parameters/phone_call
     chmod 0660 /sys/module/htc_battery_8x60/parameters/phone_call
@@ -188,44 +156,33 @@ on init
     chown radio /sys/class/power_supply/battery/charger_timer
 
 # Services start here
+
 service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     disabled
     oneshot
     keycodes 114 115
 
 service dhcpcd_wlan0 /system/bin/dhcpcd -ABKL
-    class main
     disabled
     oneshot
 
 service dhcpcd_p2p /system/bin/dhcpcd -aABKL
-    class main
     disabled
     oneshot
 
 service dhcpcd_bnep0 /system/bin/dhcpcd -ABKL
-    class main
     disabled
     oneshot
 
 service iprenew_wlan0 /system/bin/dhcpcd -n
-    class main
     disabled
     oneshot
 
 service iprenew_p2p /system/bin/dhcpcd -n
-    class main
     disabled
     oneshot
 
 service iprenew_bnep0 /system/bin/dhcpcd -n
-    class main
-    disabled
-    oneshot
-
-# Bugreport is triggered by the KEY_VOLUMEUP and KEY_VOLUMEDOWN keycodes
-service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
-    class late_start
     disabled
     oneshot
 
@@ -245,17 +202,9 @@ service htcbatt /system/bin/htcbatt
     class core
     user root
 
-service iprenew_wlan0 /system/bin/dhcpcd -n
-    disabled
-    oneshot
-
 service modem /system/bin/wireless_modem
     user system
     group system radio
-    disabled
-
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp --single_core_while_panel_off
-    user root
     disabled
 
 service netmgrd /system/bin/netmgrd
@@ -273,11 +222,6 @@ service qmuxd /system/bin/qmuxd
     class core
     user radio
     group radio audio bluetooth gps
-
-service thermald /system/bin/thermald
-    user root
-    group root
-    disabled
 
 service wpa_supplicant /system/bin/wpa_supplicant \
         -Dnl80211 -iwlan0 -puse_p2p_group_interface=1 -e/data/misc/wifi/entropy.bin

@@ -9,11 +9,11 @@ rild.libpath=/system/lib/librilswitch.so
 ro.telephony.default_network=0
 ro.telephony.ril.v3=signalstrength
 
-# audio
+# Audio
 lpa.decode=true
 lpa.use-stagefright=true
 
-# bluetooth
+# Bluetooth
 ro.bt.bdaddr_path=/sys/module/htc_bdaddress/parameters/bdaddress
 
 # Graphics
@@ -32,10 +32,10 @@ ro.hdmi.enable=true
 # QCOM CPUGovernor Service
 dev.pm.dyn_samplingrate=1
 
-# wifi
+# Wifi
 wifi.interface=wlan0
 
-# wifi calling
+# Wifi Calling
 rilswitch.vendorlibpath=/system/lib/libhtc_ril.so
 rilswitch.ganlibpath=/system/lib/libganril.so
 
