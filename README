@@ -9,10 +9,10 @@ Working
 - Bluetooth [File Transferring | Pairing ]
 - Camera
 - CRT Animation
+- Data
 - DSP Manager
 - Front Facing Camera [Taking Pictures and Video Recording]
 - GPS
-- HDMI [MHL | Video and Audio]
 - LED [Flash | Notification Lights]
 - Low Power Audio (LPA)
 - Messaging [Multimedia | Text]
@@ -25,11 +25,12 @@ Working
 - Wifi-Calling [Call | Text]
 
 Not Working
-- HDMI Out
-- Switching to different network results into error
+- HDMI Out [Audio | Video]
+- Searching for a different network
 - Wifi-Calling [MMS]
 
 Known Issues
 - Bluetooth Issues with ID3 tag
+- Scrolling may not be a smooth
 - Video [AVI Format] does not play in stock gallery app
 - Video [AVI Format] video hardware acceleration does not work
