@@ -113,7 +113,7 @@ on boot
     mkdir /data/radio 0770 radio radio
     chmod 2770 /data/radio
 
-    # Permissions for Liblights.
+    # Liblights
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/amber/brightness
@@ -154,6 +154,9 @@ on boot
 
     # For slate charging timer
     chown radio /sys/class/power_supply/battery/charger_timer
+
+    # HTC Phone Call
+    chown radio /sys/module/gpio_event/parameters/phone_call_status
 
 # Services start here
 
