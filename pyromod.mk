@@ -40,6 +40,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
       ro.config.hw_quickpoweron=true \
       ro.config.nocheckin=1 \
       ro.gsm.2nd_data_retry_config=max_retries=3,2000,2000,2000 \
+      ro.HOME_APP_ADJ=1 \
       ro.max.fling_velocity=12000 \
       ro.min.fling_velocity=8000 \
       ro.ril.def.agps.mode=2 \
