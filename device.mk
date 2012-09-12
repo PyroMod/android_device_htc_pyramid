@@ -124,8 +124,8 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-    device/htc/pyramid/modules/bcmdhd.ko:/system/lib/modules/bcmdhd.ko \
-    device/htc/pyramid/modules/zram.ko:/system/lib/modules/zram.ko
+    device/htc/pyramid/prebuilt/bcmdhd.ko:/system/lib/modules/bcmdhd.ko \
+    device/htc/pyramid/prebuilt/zram.ko:/system/lib/modules/zram.ko
 
 $(call inherit-product, device/htc/pyramid/pyromod.mk)
 
