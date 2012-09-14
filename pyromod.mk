@@ -69,6 +69,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
       ro.ril.hsdpa.category=10 \
       ro.ril.hsupa.category=6 \
       ro.ril.hsxpa=2 \
+      ro.ril.radio.svn=2 \
       ro.ril.set.mtu1472=1 \
       ro.setupwizard.enable_bypass=1 \
       ro.telephony.call_ring.delay=0 \
