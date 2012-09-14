@@ -33,7 +33,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
       net.ppp0.dns1=8.8.8.8 \
       net.ppp0.dns2=8.8.4.4 \
       persist.cust.tel.eons=1 \
-      persist.sys.purgeable_assets=1 \
       persist.sys.shutdown.mode=hibernate \
       persist.telephony.support.ipv4=1 \
       persist.telephony.support.ipv6=1 \
