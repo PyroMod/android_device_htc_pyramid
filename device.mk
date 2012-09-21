@@ -114,19 +114,8 @@ PRODUCT_COPY_FILES += device/htc/pyramid/configs/AudioBTID.csv:system/etc/AudioB
 
 # misc
 PRODUCT_COPY_FILES += \
-    device/htc/pyramid/prebuilt/01zram:/system/etc/init.d/01zram \
+    device/htc/pyramid/configs/01zram:/system/etc/init.d/01zram \
     device/htc/pyramid/vold.fstab:system/etc/vold.fstab
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/pyramid/prebuilt/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel \
-    device/htc/pyramid/prebuilt/bcmdhd.ko:/system/lib/modules/bcmdhd.ko \
-    device/htc/pyramid/prebuilt/zram.ko:/system/lib/modules/zram.ko
 
 $(call inherit-product, device/htc/pyramid/pyromod.mk)
 

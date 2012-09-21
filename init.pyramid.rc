@@ -125,9 +125,6 @@ on boot
     chown system camera /sys/class/leds/flashlight/brightness
     chmod 0660          /sys/class/leds/flashlight/brightness
 
-    # Create symlink for fb1 as HDMI
-    symlink /dev/graphics/fb1 /dev/graphics/hdmi
-
     # For wireless modem
     chown system system /sys/module/serial/parameters/modem_enabled
 
@@ -197,18 +194,9 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci \
     disabled
     oneshot
 
-service hdmid /system/bin/hdmid
-    socket hdmid stream 0660 root system graphics
-    disabled
-
 service htcbatt /system/bin/htcbatt
     class core
     user root
-
-service modem /system/bin/wireless_modem
-    user system
-    group system radio
-    disabled
 
 service netmgrd /system/bin/netmgrd
     class main
@@ -234,15 +222,6 @@ service wpa_supplicant /system/bin/wpa_supplicant \
 
 on property:init.svc.bootanim=stopped
     start qcom-post-boot
-
-on property:ro.hdmi.enable=true
-    start hdmid
-
-on property:service.modem.enable=1
-    start modem
-
-on property:service.modem.enable=0
-    stop modem
 
 on property:sys.radio.shutdown=true
     exec /system/bin/sh /system/etc/init.qcom.efs.sync.sh
