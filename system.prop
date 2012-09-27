@@ -26,6 +26,10 @@ debug.sf.hw=1
 ro.opengles.version=131072
 ro.sf.compbypass.enable=1
 
+# HDMI
+com.qc.hdmi_out=true
+ro.hdmi.enable=true
+
 # QCOM CPUGovernor Service
 dev.pm.dyn_samplingrate=1
 
