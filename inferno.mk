@@ -15,8 +15,9 @@
 #
 
 PRODUCT_PROPERTY_OVERRIDES += \
-      dalvik.vm.dexopt-flags=m=y \
+      dalvik.vm.dexopt-flags=v=f,o=v,u=y,m=y \
       dalvik.vm.lockprof.threshold=500 \
+      dalvik.vm.verify-bytecode=true \
       debug.performance.tuning=1 \
       htc.audio.alt.enable=0 \
       htc.audio.hac.enable=0 \
