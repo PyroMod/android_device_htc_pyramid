@@ -15,7 +15,7 @@
 #
 
 PRODUCT_PROPERTY_OVERRIDES += \
-      dalvik.vm.dexopt-flags=v=f,o=v,u=y,m=y \
+      dalvik.vm.dexopt-flags=v=f,o=v,u=n,m=y \
       dalvik.vm.lockprof.threshold=500 \
       dalvik.vm.verify-bytecode=true \
       debug.performance.tuning=1 \
