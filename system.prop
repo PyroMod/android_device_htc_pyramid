@@ -5,7 +5,7 @@ ro.sf.lcd_density=240
 
 # Radio
 mobiledata.interfaces=rmnet0,wlan0,gprs,ppp0
-rild.libpath=/system/lib/libhtc_ril.so
+rild.libpath=/system/lib/librilswitch.so
 ro.ril.radio.svn=2
 ro.telephony.default_network=0
 ro.telephony.ril.v3=signalstrength
@@ -35,6 +35,11 @@ dev.pm.dyn_samplingrate=1
 
 # Wifi
 wifi.interface=wlan0
+
+# Wifi Calling
+rilswitch.vendorlibpath=/system/lib/libhtc_ril.so
+rilswitch.ganlibpath=/system/lib/libganril.so
+ro.ril.enable.ganlite=1
 
 # UMS
 persist.sys.usb.config=mass_storage,adb
