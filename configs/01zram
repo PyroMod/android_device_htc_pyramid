@@ -16,11 +16,9 @@
 #
 # zram setup
 #
-if [ -e /system/lib/modules/zram.ko ];
+if [ -e /sys/block/zram0/disksize ];
 then
     # Activate zram
-    busybox modprobe zram num_devices=1;
-    busybox echo 1 > /sys/block/zram0/reset;
     busybox echo $((192*1024*1024)) > /sys/block/zram0/disksize;
     busybox mkswap /dev/block/zram0;
     busybox swapon /dev/block/zram0;
