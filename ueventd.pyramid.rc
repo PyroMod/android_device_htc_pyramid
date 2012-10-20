@@ -19,7 +19,7 @@
 /dev/pmem_smipool*      0660    system      camera
 /dev/pmem_camera*       0660    system      camera
 
-# the DIAG device node is world writable/readable.
+# DIAG device node is world readable/writable
 /dev/diag               0666    root        root
 
 # sensors
@@ -53,7 +53,6 @@
 /dev/msm_evrc_in        0660    system      audio
 /dev/msm_wma            0660    system      audio
 /dev/msm_wmapro         0660    system      audio
-/dev/msm_aac            0660    system      audio
 /dev/msm_aac_in         0660    system      audio
 /dev/msm_amrnb_in       0640    system      audio
 
@@ -61,9 +60,6 @@
 /dev/ttyHSUSB0          0600    system      system
 /dev/ttySA0             0600    system      system
 /dev/smd0               0640    radio       radio
-/dev/smd2               0660    bluetooth   bluetooth
-/dev/smd3               0660    bluetooth   bluetooth
-/dev/smd4               0660    system      system
 /dev/smd7               0640    radio       radio
 /dev/smd9               0600    system      system
 /dev/smdcntl0           0640    radio       radio

@@ -115,7 +115,6 @@ PRODUCT_COPY_FILES += device/htc/pyramid/configs/AudioBTID.csv:system/etc/AudioB
 
 # misc
 PRODUCT_COPY_FILES += \
-    device/htc/pyramid/configs/01zram:/system/etc/init.d/01zram \
     device/htc/pyramid/vold.fstab:system/etc/vold.fstab
 
 $(call inherit-product, device/htc/pyramid/inferno.mk)
